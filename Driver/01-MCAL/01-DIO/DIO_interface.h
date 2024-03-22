@@ -51,6 +51,6 @@ DIO_ErrorStatus DIO_enumTogglePinValue  (u8 copy_u8PORT,u8 copy_u8Pin);
 DIO_ErrorStatus DIO_enumSetLowNibbleValue  (u8 copy_u8PORT, u8 copy_u8Value);
 DIO_ErrorStatus DIO_enumSetHighNibbleValue (u8 copy_u8PORT, u8 copy_u8Value);
 DIO_ErrorStatus DIO_enumSetLowNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction);
-DIO_ErrorStatus DIO_enumSetHighNibbleeDirection(u8 copy_u8PORT,u8 copy_u8Direction);
+DIO_ErrorStatus DIO_enumSetHighNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction);
 
 #endif
