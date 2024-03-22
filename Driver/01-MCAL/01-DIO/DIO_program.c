@@ -37,7 +37,7 @@ DIO_ErrorStatus DIO_enumSetPortDirection(u8 copy_u8PORT,u8 copy_u8Direction)
 DIO_ErrorStatus DIO_enumSetPortValue(u8 copy_u8PORT,u8 copy_u8Value)
 {
    DIO_ErrorStatus Loc_enumState=DIO_OK;
-
+   
 	 switch(copy_u8PORT)
 	 {
 		 case DIO_PORTA:PORTA_REG=copy_u8Value;break;
@@ -46,7 +46,9 @@ DIO_ErrorStatus DIO_enumSetPortValue(u8 copy_u8PORT,u8 copy_u8Value)
 		 case DIO_PORTD:PORTD_REG=copy_u8Value;break;
 		 default: Loc_enumState=DIO_NOK;
 	 } 
-
+   
+   
+	 
  return Loc_enumState;
 }
 
@@ -196,4 +198,77 @@ DIO_ErrorStatus DIO_enumTogglePinValue(u8 copy_u8PORT,u8 copy_u8Pin)
 		Loc_enumState =DIO_NOK;
 	
  return Loc_enumState;
+}
+DIO_ErrorStatus DIO_enumSetLowNibbleValue  (u8 copy_u8PORT, u8 copy_u8Value)
+{
+	DIO_ErrorStatus Loc_enumState=DIO_OK;
+	copy_u8Value &=0x0f;
+	
+		switch(copy_u8PORT)
+		{
+			case DIO_PORTA: PORTA_REG&=0xf0;PORTA_REG|=copy_u8Value; break;
+			case DIO_PORTB: PORTB_REG&=0xf0;PORTB_REG|=copy_u8Value; break;
+			case DIO_PORTC: PORTC_REG&=0xf0;PORTC_REG|=copy_u8Value; break;
+			case DIO_PORTD: PORTD_REG&=0xf0;PORTD_REG|=copy_u8Value; break;
+			default: Loc_enumState =DIO_NOK;
+			
+		}
+	return Loc_enumState;
+	
+}
+DIO_ErrorStatus DIO_enumSetHighNibbleValue (u8 copy_u8PORT,u8 copy_u8Value)
+{
+	
+	DIO_ErrorStatus Loc_enumState=DIO_OK;
+	copy_u8Value &=0xf0;
+	
+		switch(copy_u8PORT)
+		{
+			case DIO_PORTA: PORTA_REG&=0x0f;PORTA_REG|=copy_u8Value; break;
+			case DIO_PORTB: PORTB_REG&=0x0f;PORTB_REG|=copy_u8Value; break;
+			case DIO_PORTC: PORTC_REG&=0x0f;PORTC_REG|=copy_u8Value; break;
+			case DIO_PORTD: PORTD_REG&=0x0f;PORTD_REG|=copy_u8Value; break;
+			default: Loc_enumState =DIO_NOK;
+			
+		}
+	return Loc_enumState;
+	
+}
+DIO_ErrorStatus DIO_enumSetLowNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction)
+{
+	
+	DIO_ErrorStatus Loc_enumState =DIO_OK;
+	copy_u8Direction&=0x0f;
+		switch(copy_u8PORT)
+		{
+			case DIO_PORTA: DDRA_REG &=0xf0;DDRA_REG|=copy_u8Direction;break;
+			case DIO_PORTB: DDRB_REG &=0xf0;DDRB_REG|=copy_u8Direction;break;
+			case DIO_PORTC: DDRC_REG &=0xf0;DDRC_REG|=copy_u8Direction;break;
+			case DIO_PORTD: DDRD_REG &=0xf0;DDRD_REG|=copy_u8Direction;break;
+			default: Loc_enumState =DIO_NOK;
+		}
+	
+
+		
+ return Loc_enumState;
+	
+}
+DIO_ErrorStatus DIO_enumSetHighNibbleeDirection(u8 copy_u8PORT,u8 copy_u8Direction)
+{
+	
+	DIO_ErrorStatus Loc_enumState =DIO_OK;
+	copy_u8Direction&=0xf0;
+		switch(copy_u8PORT)
+		{
+			case DIO_PORTA: DDRA_REG &=0x0f;DDRA_REG|=copy_u8Direction;break;
+			case DIO_PORTB: DDRB_REG &=0x0f;DDRB_REG|=copy_u8Direction;break;
+			case DIO_PORTC: DDRC_REG &=0x0f;DDRC_REG|=copy_u8Direction;break;
+			case DIO_PORTD: DDRD_REG &=0x0f;DDRD_REG|=copy_u8Direction;break;
+			default: Loc_enumState =DIO_NOK;
+		}
+	
+
+		
+ return Loc_enumState;
+	
 }
