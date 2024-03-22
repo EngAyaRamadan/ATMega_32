@@ -25,7 +25,7 @@
 #define DIO_PIN6 6
 #define DIO_PIN7 7
  /*DIRECTION*/
- #define DIO_PIN_INPUT 0
+#define DIO_PIN_INPUT 0
 #define DIO_PIN_OUTPUT 1
  /*Values*/
 #define DIO_PIN_LOW  0
@@ -47,5 +47,10 @@ DIO_ErrorStatus DIO_enumSetPinValue     (u8 copy_u8PORT,u8 copy_u8Pin,u8 copy_u8
 DIO_ErrorStatus DIO_enumGetPinValue     (u8 copy_u8PORT,u8 copy_u8Pin,u8 *copy_PtrData); 
 DIO_ErrorStatus DIO_enumTogglePinValue  (u8 copy_u8PORT,u8 copy_u8Pin);
 
+
+DIO_ErrorStatus DIO_enumSetLowNibbleValue  (u8 copy_u8PORT, u8 copy_u8Value);
+DIO_ErrorStatus DIO_enumSetHighNibbleValue (u8 copy_u8PORT, u8 copy_u8Value);
+DIO_ErrorStatus DIO_enumSetLowNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction);
+DIO_ErrorStatus DIO_enumSetHighNibbleeDirection(u8 copy_u8PORT,u8 copy_u8Direction);
 
 #endif
