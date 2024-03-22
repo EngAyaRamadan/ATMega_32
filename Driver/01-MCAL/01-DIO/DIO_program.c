@@ -253,7 +253,7 @@ DIO_ErrorStatus DIO_enumSetLowNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction
  return Loc_enumState;
 	
 }
-DIO_ErrorStatus DIO_enumSetHighNibbleeDirection(u8 copy_u8PORT,u8 copy_u8Direction)
+DIO_ErrorStatus DIO_enumSetHighNibbleDirection(u8 copy_u8PORT,u8 copy_u8Direction)
 {
 	
 	DIO_ErrorStatus Loc_enumState =DIO_OK;
