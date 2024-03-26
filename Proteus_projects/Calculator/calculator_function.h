@@ -2,7 +2,7 @@
  * calculator_function.h
  *
  *  Created on: Mar 26, 2024
- *      Author: QUADRO
+ *      Author: Aya Ramadan
  */
 
 #ifndef CALCULATOR_FUNCTION_H_
