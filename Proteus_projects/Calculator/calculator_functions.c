@@ -2,7 +2,7 @@
  * calculator_functions.c
  *
  *  Created on: Mar 26, 2024
- *      Author: QUADRO
+ *      Author: Aya Ramadan
  */
 
 /* variables */
@@ -99,6 +99,7 @@ void calculator(void)
 			CLCD_voidClearScreen(  );
 			count=0;
 			press=NOT_PRESSED;
+			num1=0;num2=0;result=0;
 			continue;
 		}
 		/* store data of two numbers */
