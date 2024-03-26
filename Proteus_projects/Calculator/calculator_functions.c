@@ -5,10 +5,7 @@
  *      Author: Aya Ramadan
  */
 
-/* variables */
-/*u8 press=NOT_PRESSED,num1=NOT_PRESSED,num2=NOT_PRESSED,operator=NOT_PRESSED,count=0;
-	float result=0;
- */
+
 #include "STD_TYPES.h"
 #include "KPD_interface.h"
 #include "CLCD_interface.h"
