@@ -9,6 +9,6 @@
 #define CALCULATOR_FUNCTION_H_
 
 
-void one_digit(void);
+
 void calculator(void);
 #endif /* CALCULATOR_FUNCTION_H_ */
